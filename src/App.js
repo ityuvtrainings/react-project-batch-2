@@ -4,8 +4,10 @@ import About from "./page/about"
 import Contact from "./page/contact"
 import Layout from "./Layout/layout";
 import City from "./page/city";
+import HookUseRef from "./page/use-ref";
+import Counter from "./page/use-reducer";
+
 function App() {//1
-  
   const rountlist=[
     {
       path:'Ajmer/:state/:place',
@@ -26,9 +28,17 @@ function App() {//1
     {
       path:'home',
       element:<Home/>
+    },
+    {
+      path:'useref',
+      element:<HookUseRef/>
+    },
+    {
+      path:'userreducer',
+      element:<Counter/>
     }
-  ]
 
+  ]
   return (
     <>
       <Layout>
@@ -37,8 +47,8 @@ function App() {//1
              <Route path={item.path} element={item.element} />
             )}
           </Routes>
-           <Link to={'/Ajmer/Rajasthan/vaishalinagar'}>Ajmer</Link>
-          <a href="/Jaipur/Rajasthan/vaishalinagar">Jaipur</a>
+           {/* <Link to={'/Ajmer/Rajasthan/vaishalinagar'}>Ajmer</Link>
+          <a href="/Jaipur/Rajasthan/vaishalinagar">Jaipur</a> */}
       </Layout>
     </>
   )
