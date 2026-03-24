@@ -6,7 +6,7 @@ import Layout from "./Layout/layout";
 import City from "./page/city";
 import HookUseRef from "./page/use-ref";
 import Counter from "./page/use-reducer";
-
+import CounterCallBack from "./page/use-callback";
 function App() {//1
   const rountlist=[
     {
@@ -36,6 +36,9 @@ function App() {//1
     {
       path:'userreducer',
       element:<Counter/>
+    },{
+      path:'usecallback',
+      element:<CounterCallBack/>
     }
 
   ]
