@@ -7,13 +7,14 @@ import City from "./page/city";
 import HookUseRef from "./page/use-ref";
 import Counter from "./page/use-reducer";
 import CounterCallBack from "./page/use-callback";
+import UseEffectEvents from "./page/usereffectevent"
 function App() {//1
   const rountlist=[
     {
       path:'Ajmer/:state/:place',
       element:<City city={'Ajmer'}/>
     },
-     {
+    {
       path:'Jaipur/:state/:place',
       element:<City city={'Jaipur'}/>
     },
@@ -36,11 +37,15 @@ function App() {//1
     {
       path:'userreducer',
       element:<Counter/>
-    },{
+    },
+    {
       path:'usecallback',
       element:<CounterCallBack/>
     }
-
+    ,{
+      path:'useeffectEvent',
+      element:<UseEffectEvents/>
+    }
   ]
   return (
     <>
