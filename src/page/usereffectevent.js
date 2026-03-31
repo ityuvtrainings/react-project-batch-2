@@ -13,7 +13,6 @@ const UseEffectEvents = () => {
             clearInterval(idv);
         };
     }, []);
-
     return (
         <>
             <h1>

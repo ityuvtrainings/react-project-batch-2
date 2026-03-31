@@ -1,13 +1,13 @@
 import { Route, BrowserRouter, Routes, Link } from "react-router";
 import Home from "./page/home";
-import About from "./page/about"
-import Contact from "./page/contact"
 import Layout from "./Layout/layout";
 import City from "./page/city";
 import HookUseRef from "./page/use-ref";
 import Counter from "./page/use-reducer";
 import CounterCallBack from "./page/use-callback";
 import UseEffectEvents from "./page/usereffectevent"
+import { useEffect } from "react";
+import PasswordFieldUserId from "./page/PasswordFieldUserId";
 function App() {//1
   const rountlist=[
     {
@@ -46,7 +46,15 @@ function App() {//1
       path:'useeffectEvent',
       element:<UseEffectEvents/>
     }
+    ,{
+      path:'PasswordFieldUserId',
+      element:<PasswordFieldUserId/>
+    }
   ]
+  useEffect(()=>{
+    console.log("Ajmer")
+        localStorage.setItem('userdetails',JSON.stringify({name:'rajesh',age:25}))
+  },[])
   return (
     <>
       <Layout>
