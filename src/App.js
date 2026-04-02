@@ -54,6 +54,13 @@ function App() {//1
   useEffect(()=>{
     console.log("Ajmer")
         localStorage.setItem('userdetails',JSON.stringify({name:'rajesh',age:25}))
+        sessionStorage.setItem('userdata',JSON.stringify({name:'rajesh',age:25}))
+        // sessionStorage.removeItem('userdata')
+        // sessionStorage.clear()
+        sessionStorage.setTimeout(() => {
+          sessionStorage.removeItem('userdata')
+        },8000 );
+
   },[])
   return (
     <>

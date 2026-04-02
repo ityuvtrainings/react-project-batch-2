@@ -7,6 +7,8 @@ const Home=()=>{
     const [data,setdata]=useState(null)
     useEffect(()=>{
         const datalocal=localStorage.getItem('userdetails')
+        const sessdata=sessionStorage.getItem('userdata')
+        console.log(sessdata)
         console.log(JSON.parse(datalocal))
     })
     return(
