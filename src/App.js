@@ -5,11 +5,13 @@ import {useState } from "react";
 import Home from "./website/home"
 import About from "./website/about"
 import Contact from "./website/contact"
+import ToDo from "./todo";
+
 function App() {
   const [auth, setauth] = useState(false);
   return (
     <>
-      <BrowserRouter>
+      {/* <BrowserRouter>
         <Routes>
           {auth === false && (
             <>
@@ -28,7 +30,8 @@ function App() {
           )}
 
         </Routes>
-      </BrowserRouter>
+      </BrowserRouter> */}
+    <ToDo/>
     </>
   )
 }
